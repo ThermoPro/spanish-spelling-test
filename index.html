@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling and Meaning Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .hidden { display: none; }
+    .message { font-size: 18px; margin: 10px 0; }
+    input[type="text"], textarea { width: 100%; padding: 10px; font-size: 16px; margin: 10px 0; }
+    button { margin: 5px; padding: 10px; font-size: 16px; }
+    #scoreDisplay { font-size: 20px; font-weight: bold; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Spanish Spelling and Meaning Test</h1>
+  <p>Instructions:</p>
+  <ul>
+    <li>Enter Spanish words separated by commas.</li>
+    <li>Listen to the word and spell it correctly.</li>
+    <li>Select the correct meaning of the word from multiple choices.</li>
+    <li>You will score a point only if both the spelling and meaning are correct.</li>
+  </ul>
+  <div id="scoreDisplay">Correct: 0 | Incorrect: 0</div>
+
+  <textarea id="wordsInput" placeholder="Enter Spanish words separated by commas"></textarea>
+  <br><br>
+  <button id="startBtn">Start Test</button>
+
+  <div id="gameContainer" class="hidden">
+    <div id="spokenWord" class="message"></div>
+    <input type="text" id="userInput" placeholder="Type the word here">
+    <div>
+      <button id="checkSpellingBtn">Check Spelling</button>
+      <button id="repeatWordBtn">Repeat Word</button>
+    </div>
+    <div id="feedback" class="message"></div>
+
+    <div id="meaningContainer" class="hidden">
+      <h3>Select the correct meaning:</h3>
+      <div id="choices"></div>
+      <button id="submitMeaningBtn" class="hidden">Submit Answer</button>
+    </div>
+
+    <button id="nextWordBtn" class="hidden">Next Word</button>
+  </div>
+
+  <div id="finalScore" class="message hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
